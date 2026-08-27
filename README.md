@@ -14,15 +14,6 @@ Built for the Algorithmic Thinking Club at Bonney Lake High School.
 - `server/` a small Node API the dev server mounts
 - `archive/` an earlier approach that generated maps in 3D, kept for reference
 
-## Running it
-
-```
-npm install
-npm run dev
-```
-
-Port 5273. Drop a PNG onto the canvas to start.
-
 ## Why it stopped
 
 The map problem was solved by hand-drawing masks over one whole painting rather than assembling maps
