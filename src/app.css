@@ -1,0 +1,270 @@
+:root {
+  --bg: #0b0d11;
+  --panel: #14171c;
+  --edge: #232830;
+  --ink: #d8dee7;
+  --dim: #79828f;
+  --hot: #ffb054;
+  --ok: #6fd08c;
+  --cut: #ff40d0;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 12px/1.45 ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+button {
+  font: inherit;
+  color: var(--ink);
+  background: #1b1f26;
+  border: 1px solid var(--edge);
+  border-radius: 3px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+button:hover:not(:disabled) {
+  background: #242a33;
+}
+button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+input {
+  font: inherit;
+  color: var(--ink);
+  background: #10131a;
+  border: 1px solid var(--edge);
+  border-radius: 3px;
+  padding: 3px 6px;
+}
+input:focus {
+  outline: none;
+  border-color: #3c4654;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 42px auto 1fr 26px;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--edge);
+}
+header input {
+  flex: 1;
+  height: 26px;
+  font-size: 13px;
+}
+header .meta {
+  color: var(--dim);
+  white-space: nowrap;
+}
+
+.strip {
+  display: flex;
+  gap: 6px;
+  padding: 6px 10px;
+  background: #0f1217;
+  border-bottom: 1px solid var(--edge);
+  overflow-x: auto;
+}
+.cand {
+  padding: 0;
+  height: 78px;
+  min-width: 100px;
+  display: grid;
+  place-items: center;
+  background: #0b0d11;
+  overflow: hidden;
+}
+.cand img {
+  display: block;
+  height: 76px;
+  image-rendering: pixelated;
+}
+.cand.wait {
+  min-width: 138px;
+  background: repeating-linear-gradient(45deg, #12151b, #12151b 8px, #171b22 8px, #171b22 16px);
+}
+.cand span {
+  color: var(--dim);
+}
+
+main {
+  display: flex;
+  min-height: 0;
+}
+
+.tools {
+  width: 38px;
+  flex: 0 0 38px;
+  background: var(--panel);
+  border-right: 1px solid var(--edge);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 0;
+}
+.tools button {
+  width: 28px;
+  height: 26px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  color: var(--dim);
+}
+.tools button.on {
+  color: #1b1206;
+  background: var(--hot);
+  border-color: var(--hot);
+}
+/* the cut family edits the cut mask, never the levels, so it reads in its
+   own colour: the same magenta the cut overlay hatches with */
+.tools button.cut {
+  color: #c760a6;
+}
+.tools button.cut.on {
+  color: #2a0a20;
+  background: var(--cut);
+  border-color: var(--cut);
+}
+.tools .sep {
+  width: 22px;
+  height: 1px;
+  margin: 4px 0;
+  background: var(--edge);
+}
+.tools .sparkle {
+  margin-top: 8px;
+  color: #9fd0ff;
+}
+.pal {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 13px 13px;
+  gap: 3px;
+}
+.pal .chip {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border: 1px solid #0006;
+  border-radius: 2px;
+}
+.pal .chip.on {
+  border-color: #fff;
+}
+
+.stage {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  background: #07090c;
+}
+.stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  touch-action: none;
+  cursor: crosshair;
+}
+.empty {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  color: var(--dim);
+  pointer-events: none;
+}
+.walkbadge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 3px 8px;
+  border: 1px solid var(--ok);
+  border-radius: 3px;
+  color: var(--ok);
+  background: #0b1a12cc;
+  pointer-events: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  background: var(--panel);
+  border-top: 1px solid var(--edge);
+  font-size: 11px;
+}
+footer button {
+  padding: 1px 7px;
+}
+footer .read {
+  white-space: nowrap;
+}
+footer .dim {
+  color: var(--dim);
+}
+footer .note {
+  flex: 1;
+  color: var(--hot);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+footer .baseline {
+  color: var(--dim);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+footer .baseline input {
+  width: 52px;
+  padding: 0 4px;
+}
+footer .cuttol {
+  color: var(--dim);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+footer .cuttol input {
+  width: 90px;
+  padding: 0;
+  accent-color: var(--cut);
+}
+footer button.cutbtn {
+  color: #e08cc6;
+  border-color: #5a2a4a;
+}
+footer button.cutbtn.on {
+  color: #2a0a20;
+  background: var(--cut);
+  border-color: var(--cut);
+}
+footer .hint {
+  padding-left: 2px;
+}

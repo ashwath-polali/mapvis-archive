@@ -1,0 +1,9 @@
+[
+ [509,194,523,193,10,7,"B1 feet left <- band right, agave-free"],
+ [519,194,525,193,6,7,"B1 feet right <- breakwater top walk"],
+ [517,185,523,186,6,7,"B1 slab tile A <- visible slab right"],
+ [511,183,523,186,6,7,"B1 slab tile B <- visible slab right"],
+ [509,183,523,186,2,7,"B1 slab sliver <- slab right"],
+ [517,192,523,191,6,2,"B1 shade rows A <- below slab"],
+ [511,192,523,191,6,2,"B1 shade rows B <- below slab"]
+]

@@ -1,0 +1,7 @@
+[
+ [491,210,478,215,10,11,"B3 sack <- band lower-left"],
+ [499,199,471,210,20,15,"B2 cluster <- band down-left"],
+ [517,205,504,210,7,9,"B2 cast shadow <- cleaned band"],
+ [509,183,523,182,15,12,"B1 dark-wall zone <- wall right"],
+ [509,194,523,193,15,7,"B1 feet/band zone <- band right"]
+]

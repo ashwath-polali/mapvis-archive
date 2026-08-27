@@ -1,0 +1,12 @@
+[
+ [419,176,413,176,6,13,"T4 dark tile1 <- shadow strip left"],
+ [425,176,413,176,6,13,"T4 dark tile2 <- shadow strip left"],
+ [417,188,430,184,14,11,"T4 parapet+band <- along walkway right"],
+ [431,190,443,186,7,10,"T4 right glow residue <- band further right"],
+ [451,155,442,155,8,15,"T5 left dark <- shadow left"],
+ [458,154,469,148,10,14,"T5 slope zone <- slope up-right"],
+ [452,167,470,161,17,15,"T5 band+pole <- band up-right"],
+ [446,173,446,181,6,8,"T5 below-left shade <- shade below"],
+ [495,137,484,136,13,16,"T6 foliage <- bushes left"],
+ [498,149,488,149,11,12,"T6 wall+pole <- wall stones left"]
+]

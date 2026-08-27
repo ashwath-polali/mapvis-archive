@@ -1,0 +1,10 @@
+[
+ [233,182,216,182,14,13,"T1 flame+glow <- flagstone left"],
+ [236,194,248,200,11,10,"T1 pole+dots <- along edge line right"],
+ [299,212,309,213,11,5,"T2 rock lip <- lip right"],
+ [298,217,311,221,14,13,"T2 flame+glow <- walkway right"],
+ [301,229,313,233,9,8,"T2 pole+line <- walkway+wall right"],
+ [378,197,366,196,12,4,"T3 house-base lip <- base left"],
+ [377,200,364,201,14,11,"T3 flame+glow <- plaza left"],
+ [380,210,389,217,9,9,"T3 pole+parapet <- steps right"]
+]

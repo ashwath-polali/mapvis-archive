@@ -1,0 +1,49 @@
+# --- the new tool ---
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+.env
+.env.local
+
+# Map bundles and PixelLab output the tool writes. Regenerable, often large.
+work/
+public/work/
+
+# --- archive/: the dead 3D era, kept on disk, mostly out of git ---
+# Only its markdown and its python stay in history. Every render, .blend,
+# asset pack and cache is on disk only and is not worth 8 GB of history.
+archive/*
+!archive/docs/
+!archive/pipeline/
+archive/pipeline/*.png
+archive/pipeline/*.txt
+
+# --- general ---
+# Anchored so a future src/assets/ or src/export/out/ is not swallowed by them.
+/out/
+/_out/
+/_tmp/
+/assets/
+__pycache__/
+*.pyc
+*.blend
+*.blend1
+.cache/
+.DS_Store
+
+# --- added 2026-08-24, closing the half-done reorg ---
+# A downloaded upscaler and its model weights: 117 MB of somebody else's
+# binaries, fetchable again in a minute, and not worth carrying in history.
+hubgen/tools-esrgan/
+
+# Contact sheets built FROM the waves below. Derived, rebuildable, 15 MB.
+gate-quality/
+
+# The wave folders themselves STAY. They are roughly 1,100 PixelLab generations
+# of hub candidates and they are the record of how wave23 was arrived at.
+
+# Working notes, kept on disk and never published
+archive/docs/
+*.local.md
